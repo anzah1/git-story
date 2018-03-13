@@ -65,6 +65,21 @@ push our changes to make boss happy:
 git push
 ```
 
+After that there's complaint from boss:
+> Please remember to tag your releases!
+
+We sure did tag the release, but better make sure by using `git log` in our
+shared repository in legendary project.
+
+And yes, we forgot to push the tags. But that's easy enough to fix by first
+going back to the working copy and then pushing the tags.
+
+```bash
+git push --tags
+```
+
+And yes, now tags are also available in the shared repository.
+
 # Revenge of the maintenance release
 
 There's message from customer:
@@ -116,10 +131,11 @@ git tag 1.1
 ```
 
 Let's push the release, customer is eagerly waiting for it. Let's not mess our
-master branch though as we have the new release there waiting.
+master branch though as we have the new release there waiting. This time we
+should remember to push also tags.
 
 ```bash
-git push origin awesome_camel
+git push --tags origin awesome_camel
 ```
 
 # Red Alert!
@@ -244,7 +260,7 @@ git tag -f 2.0
 We're ready, so we'll just push the release out:
 
 ```bash
-git push
+git push --tags
 ```
 
 # Trilogy
