@@ -90,6 +90,7 @@ Let's do just that.
 ```bash
 echo cat >> animals
 echo dog >> animals
+git commit -a -m "Add pets"
 ```
 
 As pets is a major addition, let's tag that as new major release:
