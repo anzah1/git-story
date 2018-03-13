@@ -68,7 +68,7 @@ git push
 # Revenge of the maintenance release
 
 There's message from customer:
-> We don't have that kind of animals over here. Can you add pets? 
+> We don't have that kind of animals over here. Can you add pets?
 
 Let's do just that.
 
@@ -101,7 +101,7 @@ What branch we were on again?
 git branch
 ```
 
-Awesome. On awesome_camel. 
+Awesome. On awesome_camel.
 
 Let's add the sorely missed camel:
 
@@ -145,7 +145,7 @@ Maybe using the awesome branch name helps:
 git merge awesome_camel
 ```
 
-There's still merge conflict. I guess we have to just deal with it. 
+There's still merge conflict. I guess we have to just deal with it.
 
 Let's see what's causing the issue:
 
