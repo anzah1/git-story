@@ -99,7 +99,7 @@ As pets is a major addition, let's tag that as new major release:
 git tag 2.0
 ```
 
-There's mail from another customer:
+But before we get to push the release out, there's mail from another customer:
 > Stupid developers! I can't believe that my favourite animal camel is
 > missing!!!1! I want it right now, don't add anything else, or else!
 
@@ -123,7 +123,7 @@ Let's add the sorely missed camel:
 
 ```bash
 echo camel >> animals
-git commit -a -m "Awesome camel"
+git commit -a -m "A wild camel appears!"
 ```
 
 That's maintenance release:
@@ -266,19 +266,53 @@ git push --tags
 
 # Trilogy
 
-Next release is about lizards. I think had something to do with browsers:
+Next release is about lizards. Boss is not sure how much lizards are needed for
+a full release, so we can skip making a tag this time around.
+
+I think there was lizard that had something to do with browsers:
 ```bash
 echo firefox >> animals
 git commit -a -m "Add a lizard"
+```
+
+Wait, it was supposed to be a gecko! Luckily as we did'nt push it, we can clean
+up the mess without anybody noticing.
+```bash
+git reset --hard origin/master
+```
+
+Let's add the real lizard instead:
+```git bash
+echo gecko >> animals
+git commit -a -m "Add a lizard"
+```
+
+Let's not push that just yet. There was some other lizard, it was blue...no yellow!
+
+```git bash
+echo chameleon >> animals
+git commit -a -m "Add a lizard"
+```
+
+We're still working on same topic though, let's merge those two commits into one:
+
+```git bash
+git reset 2.0
+git commit -a -m "Add lizards"
 git push
 ```
 
-Wait, it was supposed to be a gecko! We did already push it though, so revert is our best friend.
-```bash
+Apparently lizards are not in fashion after all, so boss asked to revert the
+lizard development. Luckily we pushed all development as one commit, so we can
+just revert the latest commit.
+
+```git bash
 git revert HEAD
-```
-
-Let's push it before anybody will try to use our faulty commit:
-```bash
 git push
 ```
+
+While we're waiting for next big release. We should make work more effecient.
+Should read some `git help config` at least. There must be some ways to reduce
+number of needed command line parameters, even without using aliases.
+
+That's for another time. Our busy day at work is over.
