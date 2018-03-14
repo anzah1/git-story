@@ -259,10 +259,12 @@ force as 2.0 still exists in alternate history:
 git tag -f 2.0
 ```
 
-We're ready, so we'll just push the release out:
+We're ready, so we'll just push the release out. Problem is that we already
+accidentally pushed 2.0 tag, so we need to forcibly push it again.
 
 ```bash
-git push --tags
+git push
+git push -f origin refs/tags/2.0
 ```
 
 # Trilogy
