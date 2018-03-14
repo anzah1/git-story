@@ -145,6 +145,7 @@ Boss is asking that new release should be available for customers yesterday. We
 haven't merged maintenance release yet:
 
 ```bash
+git checkout master
 git merge 1.1
 ```
 
